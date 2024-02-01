@@ -11,32 +11,27 @@
         href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playfair+Display:wght@500&family=Ubuntu:wght@400;500&display=swap"
         rel="stylesheet">
     <style>
-        body {
-            color: grey;
+        *{
+            color: rgb(214, 214, 214);
             font-family: 'Permanent Marker', cursive;
             font-family: 'Playfair Display', serif;
             font-family: 'Ubuntu', sans-serif;
-            background-image: url("anete-lusina-zwsHjakE_iI-unsplash.jpg");
+            
         }
         
         .box {
-            /* background-image: url("anete-lusina-zwsHjakE_iI-unsplash.jpg"); */
-            /* Add the blur effect */
-            filter: blur(8px);
-            -webkit-filter: blur(8px);
-
-            /* Full height */
-            height: 100%;
-
-            /* Center and scale the image nicely */
+            position: absolute;
+            width: 100%;
+            background-image: url("anete-lusina-zwsHjakE_iI-unsplash.jpg");
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
-
+            z-index: -1;
+            filter: blur(6px);
+            height: 100%;
         }
 
         .text {
-
             background-color: rgb(0, 0, 0);
             background-color: rgba(0, 0, 0, 0.4);
             color: white;
@@ -46,7 +41,6 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 2;
             width: 80%;
             padding: 20px;
             text-align: center;
@@ -55,22 +49,131 @@
         .head {
             font-size: 300%;
         }
+        .nav {
+            display: flex;
+
+        }
+
+        .right_navbar {
+            /* border: 2px solid red; */
+            
+            /* float: right; */
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .main{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navitem {
+            
+            font-size: 200%;
+            text-align: center;
+        }
+
+        #left {
+            
+            
+            font-size: 301%;
+            color: whitesmoke;
+            
+        } 
+        
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: wheat;
+        }
+
+        a:active {
+            text-decoration: underline;
+            transition: 4s;
+            animation: backwards;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #646464;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rebeccapurple;
+            padding: 12px 16px;
+            z-index: 1;
+        }
+        .contact{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .contact:hover .dropdown {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-wrap: wrap;
+            cursor: pointer;
+            margin-top: 140px;
+            /* width: 110px; */
+        }
+        .right{
+            display: flex;
+            width: 40%;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        ul{
+            list-style: none;
+            
+        }
+        li{
+            margin-bottom: 3vh;
+        }
     </style>
 </head>
 
 <body>
+    
+    <!-- above same page -->
     <div class="box"></div>
-    <div class="text">
-        <h1 class="head">About Me</h1>
-        <h4>Educational Qualifications</h4>
-        <ul>Name of the school :- Saint Paul's School</ul>
-        <ul>Location of the school :- Rajkot,Gujarat</ul>
-        <ul>Degree obtained :- Passed Higher Secondary School</ul>
-        <ul>Field of study :- B.Tech Computer Science & Engineering (Ongoing 2nd year)</ul>
-        <ul>Year of graduation :- 2026</ul>
-        <ul> CGPA :- 8.5 (till Sem 3)</ul>
-        <p> Currently Studying in VIT,Vellore,Tamil Nadu</p>
+    <div class="main">
 
+        <div class="right_navbar">
+            <h1 id="left">My Portfolio</h1>
+        </div>
+        <div class="right">
+    
+            <a href="assessment1.html" class="navitem" id="navitem1">Home</a>
+            <a href="about.html" class="navitem" id="navitem2">About Me</a>
+            <div class="contact">
+                <a href="" class="navitem" id="navitem3">Contact</a>
+                <div class="dropdown">
+                    <span ><img src="phone.png" style="height: 14px ; margin-right: 2px;"> +916351678300</span>
+                    <span style="width: 290px; word-wrap: break-word;"><img src="gmail.png" style="height: 14px ; margin-right: 2px;">param.godhani2022@vitstudent.ac.in</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text">
+        <h1 class="head">About Me</h1>  
+        <ul style="margin-bottom: 3vh; "><strong style="margin-bottom: 3vh;">Educational Qualifications</strong><br><br>
+        <li>Name of the school :- Saint Paul's School</li>
+        <li>Location of the school :- Rajkot,Gujarat</li>
+        <li>Degree obtained :- Passed Higher Secondary School</li>
+        <li>College :- Vellore Institute of Technology, Vellore</li>
+        <li>Field of study :- B.Tech Computer Science & Engineering (Ongoing 2nd year)</li>
+        <li>Year of graduation :- 2026</li>
+        <li> CGPA :- 8.5 (till Sem 3)</li>
+        <li>Skills :- C,C++,Python,Java, DSA(learning using C++),HTML,CSS</li>
+    </ul>
     </div>
 </body>
 
